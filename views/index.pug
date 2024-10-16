@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title POKEAPI-SSR
+    link(rel='stylesheet', href='/style.css')
+  body
+    h1 POKEAPI-SSR
+
+    input(type='text', id='input', placeholder='Pikachu')
+    div#button-container
+      button(id='Search') Search
+      button(id='Delete') Delete
+
+    div#pokemon-info
+      each pokemon in pokemonList
+        div.pokemon
+          p Nombre: #{pokemon.name} -- Id: #{pokemon.id}
+
+    script(src='/script.js')
